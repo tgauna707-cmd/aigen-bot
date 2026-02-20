@@ -7,7 +7,7 @@ st.title("🤖 Asistente Virtual - AI Gen GR")
 st.write("Prueba nuestro agente inteligente de atención al cliente.")
 
 # AQUÍ DEBES PEGAR TU API KEY DE GOOGLE ENTRE LAS COMILLAS
-API_KEY = "AIzaSyDIuDVlTWIhazP_1yZ5JnblQZlh_V36_Lg"
+API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Autenticación y configuración del modelo
 genai.configure(api_key=API_KEY)
