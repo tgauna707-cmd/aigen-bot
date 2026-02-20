@@ -11,16 +11,18 @@ API_KEY = "AIzaSyDIuDVlTWIhazP_1yZ5JnblQZlh_V36_Lg"
 
 # Autenticación y configuración del modelo
 genai.configure(api_key=API_KEY)
-# Ocultar menú de Streamlit y marca de agua
+# Ocultar menú de Streamlit y marca de agua (Versión Definitiva)
 ocultar_estilo = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            header {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
+<style>
+[data-testid="stToolbar"] {visibility: hidden !important;}
+[data-testid="stHeader"] {visibility: hidden !important;}
+[data-testid="stFooter"] {visibility: hidden !important;}
+footer {visibility: hidden !important;}
+header {visibility: hidden !important;}
+#MainMenu {visibility: hidden !important;}
+</style>
+"""
 st.markdown(ocultar_estilo, unsafe_allow_html=True)
-
 
 instrucciones = """
 Eres el asistente virtual de la Clínica Estética 'Lumina', desarrollado por AI Gen GR.
